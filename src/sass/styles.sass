@@ -1,0 +1,160 @@
+// Всі правила @use повинні бути на початку файлу
+@import 'helpers/vars'
+@import 'helpers/mixins'
+@import 'components/header'
+@import 'components/footer'
+
+// Після правил @use йдуть стилі
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: 1px
+
+body
+    font-size: 14rem
+
+.flex
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.evenly
+    display: flex
+    justify-content: space-evenly
+    flex-wrap: wrap
+    padding: 60px 0
+
+.wrapper
+    width: 95%
+    margin: auto
+
+.hidden
+    display: none
+
+sup
+    font-size: 16px
+    letter-spacing: -1px
+    line-height: 51px
+    color: #4f4f6f
+    font-weight: 500
+    font-family: "Maven Pro"
+    text-align: center
+
+.logo
+    +logo
+
+.header-menu_li
+    width: 100%
+    +menu
+
+.footer-menu_li
+    color: #6a6a77
+    +menu(false)
+
+    &:hover
+        color: #756edc
+
+button
+    +buttona
+
+.styled_button
+    border-radius: 25px
+    filter: drop-shadow(0 0 10.5px rgba(204,204,223,0.5))
+    background-color: #ffffff
+    border: 1px solid #d7dbe8
+
+.button_defalut
+    display: inline-block
+    margin: 20px 0
+    border-radius: 25px
+    filter: drop-shadow(0 0 10.5px rgba(204,204,223,0.5))
+    background-color: #ffffff
+    border: 1px solid #d7dbe8
+    padding: 5px 20px
+    font-size: 12rem
+    letter-spacing: 1rem
+    line-height: 32rem
+    text-transform: uppercase
+    color: #c2c9db
+    font-weight: 700
+    font-family: "Maven Pro"
+    text-align: center
+    transition: 0.3s
+
+    &:hover
+        color: #fff
+        background-color: #6e45e2
+
+card
+        display: block
+        text-align: center
+        margin: 15px 0
+        width: 95%
+        border-radius: 30px
+        background-color: #fff
+        border: 1px solid #d7dbe8
+        transition: 0.3s
+
+        &:hover
+            filter: drop-shadow(0 0 46px rgba(204,204,223,0.71))
+            scale: 1.03
+
+.styled_price
+    display: block
+    font-size: 60rem
+    letter-spacing: -2rem
+    line-height: 72rem
+    color: #4f4f6f
+    font-weight: 500
+    font-family: "Maven Pro"
+
+.icon_card
+    margin: 20px 0
+    width: 120px
+    height: 110px
+
+@keyframes bounce
+    0%, 20%, 50%, 80%, 100%
+        transform: translateY(0)
+
+    40%
+        transform: translateY(10px)
+
+    60%
+        transform: translateY(5px)
+
+.icon
+    animation: bounce 2s infinite
+
+.main_down
+    padding: 140px 0
+    background-image: url("../img/background_down.webp")
+    background-size: cover
+    background-position: center
+
+.button_main_down
+    +buttona
+    background-color: #fff
+    color: #c2c9db
+
+.block-buttons
+    text-align: center
+
+.button_main_down
+    transition: transform 0.5s ease, color 0.5s ease
+
+    &:hover
+        border: none
+        transform: scale(1.1)
+        color: #fff
+        background-color: #6e45e2
+
+.button-footer
+    +buttona(false)
+
+@media screen and (min-width: 768px)
+    .main_down
+        padding: 80px 0

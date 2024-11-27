@@ -1,0 +1,108 @@
+h1 {
+  display: inline;
+  font-size: 30rem;
+  letter-spacing: 6rem;
+  font-weight: 700;
+  font-family: "Maven Pro";
+  color: #fff;
+}
+
+.footer_h1 {
+  display: inline;
+  font-size: 30rem;
+  letter-spacing: 6rem;
+  font-weight: 700;
+  font-family: "Maven Pro";
+  color: #37374a;
+}
+
+.span_header {
+  display: block;
+  font-size: 14rem;
+  letter-spacing: 1rem;
+  line-height: 32rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  font-family: "Maven Pro";
+  text-align: center;
+  color: #fff;
+}
+
+.span_main {
+  display: block;
+  font-size: 14rem;
+  letter-spacing: 1rem;
+  line-height: 32rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  font-family: "Maven Pro";
+  text-align: center;
+  color: #9fa4af;
+}
+
+.span_main_down {
+  display: block;
+  font-size: 14rem;
+  letter-spacing: 1rem;
+  line-height: 32rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  font-family: "Maven Pro";
+  text-align: center;
+  color: #9fa4af;
+  color: #fff;
+}
+
+.header_h2 {
+  padding: 25px 0;
+  font-size: 60rem;
+  letter-spacing: -3rem;
+  font-weight: 500;
+  font-family: "Maven Pro";
+  text-align: center;
+  color: #fff;
+}
+
+.main_h2 {
+  padding: 25px 0;
+  font-size: 60rem;
+  letter-spacing: -3rem;
+  font-weight: 500;
+  font-family: "Maven Pro";
+  text-align: center;
+  color: #4f4f6f;
+}
+
+.header_p {
+  display: inline-block;
+  width: 75%;
+  font-size: 16rem;
+  line-height: 28rem;
+  font-weight: 400;
+  font-family: "Maven Pro";
+  color: #fff;
+}
+
+.main_p {
+  display: inline-block;
+  width: 75%;
+  font-size: 16rem;
+  line-height: 28rem;
+  font-weight: 400;
+  font-family: "Maven Pro";
+  color: #9fa4af;
+}
+
+.p_card {
+  display: inline-block;
+  width: 75%;
+  font-size: 16rem;
+  line-height: 28rem;
+  font-weight: 400;
+  font-family: "Maven Pro";
+  color: #9fa4af;
+  padding: 30px 0;
+}
