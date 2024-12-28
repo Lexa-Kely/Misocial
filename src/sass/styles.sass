@@ -3,7 +3,7 @@
 @import 'helpers/mixins'
 @import 'components/header'
 @import 'components/footer'
-
+// before
 // Після правил @use йдуть стилі
 *
     margin: 0
@@ -34,25 +34,69 @@ body
 .hidden
     display: none
 
-sup
-    font-size: 16px
-    letter-spacing: -1px
-    line-height: 51px
-    color: #4f4f6f
-    font-weight: 500
-    font-family: "Maven Pro"
-    text-align: center
+h1
+    +title
+
+ul
+    display: inline-flex
+    flex-direction: column
+    +media(726)
+        width: 625px
+    +media(1024)
+        width: 700px
+        justify-content: space-evenly
+        flex-direction: row
+
+figcaption
+    &
+        font-size: 16px
+        letter-spacing: -1px
+        line-height: 51px
+        color: #4f4f6f
+        font-weight: 500
+        font-family: "Maven Pro"
+        text-align: center
+
+.span_main
+    +title_span
+    color: #9fa4af
+    display: block
+.what
+    &::before
+        border-bottom: 1px solid $purple
+        top: 48%
+        left: -50%
+    &::after
+        border-bottom: 1px solid $purple
+        right: -50%
+        top: 46%
+
+.span_main_down
+    +title_span(false)
+    display: block
+    color: #fff
+
+h2
+    +title_h2
+    color: #fff
 
 .logo
     +logo
+    +media(1024)
+        width: 100%
+    +media(1440)
+        width: 20%
 
-.header-menu_li
-    width: 100%
-    +menu
+.main_h2
+    +title_h2
+    color: #4f4f6f
+
+.content_main
+    color: #4f4f6f
 
 .footer-menu_li
+    +menu
     color: #6a6a77
-    +menu(false)
 
     &:hover
         color: #756edc
@@ -86,24 +130,32 @@ button
 
     &:hover
         color: #fff
-        background-color: #6e45e2
+        background-color: $purple
 
-card
-        display: block
-        text-align: center
-        margin: 15px 0
-        width: 95%
-        border-radius: 30px
-        background-color: #fff
-        border: 1px solid #d7dbe8
-        transition: 0.3s
+figure
+    display: block
+    text-align: center
+    margin: 15px 0
+    width: 95%
+    border-radius: 30px
+    background-color: #fff
+    border: 1px solid #d7dbe8
+    transition: 0.3s
+    +media(1024)
+        width: 49%
+    +media(1440)
+        width: 24%
 
-        &:hover
-            filter: drop-shadow(0 0 46px rgba(204,204,223,0.71))
-            scale: 1.03
+    &:hover
+        filter: drop-shadow(0 0 46px rgba(204,204,223,0.71))
+        scale: 1.03
+
+.main_h2
+    +title_h2(false)
 
 .styled_price
-    display: block
+    display: inline-block
+    position: relative
     font-size: 60rem
     letter-spacing: -2rem
     line-height: 72rem
@@ -111,10 +163,22 @@ card
     font-weight: 500
     font-family: "Maven Pro"
 
-.icon_card
+.icon_figure
     margin: 20px 0
     width: 120px
     height: 110px
+
+.dollar
+    font-size: $font-size-base
+    top: -20%
+    left: -16%
+    position: absolute
+
+.month
+    font-size: $font-size-base
+    position: absolute
+    top: 20%
+    left: 100%
 
 @keyframes bounce
     0%, 20%, 50%, 80%, 100%
@@ -134,27 +198,64 @@ card
     background-image: url("../img/background_down.webp")
     background-size: cover
     background-position: center
+    +media(768)
+        padding: 80px 0
 
+.what 
+    display: inline
+
+    
 .button_main_down
-    +buttona
     background-color: #fff
     color: #c2c9db
-
-.block-buttons
-    text-align: center
-
-.button_main_down
     transition: transform 0.5s ease, color 0.5s ease
+    +buttona
 
     &:hover
         border: none
         transform: scale(1.1)
         color: #fff
-        background-color: #6e45e2
+        background-color: $purple
+.block-buttons
+    text-align: center
 
 .button-footer
     +buttona(false)
 
-@media screen and (min-width: 768px)
-    .main_down
-        padding: 80px 0
+.main_p
+    +title_p(false)
+    text-align: center
+
+.p_card
+    +title_p(false)
+    display: block
+    padding: 30px 0
+
+.footer_h2
+    +title(false)
+
+//media and mixins для header i footer бо там не працює :(
+//header
+.header-menu_li
+    +menu
+
+.header_p
+    +title_p
+
+.burger
+    color: #000
+    +media(1024)
+        display: none
+//footer
+
+.footer-menu
+    display: none
+    +media(1024)
+        display: flex
+        align-items: center
+.socal
+    width: 100%
+    text-align: right
+    padding: 5px 0
+    +media(726)
+        width: 28%

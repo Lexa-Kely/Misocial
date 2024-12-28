@@ -1,3 +1,4 @@
+
 header
     background-image: url("../img/backheader.webp")
     background-size: cover
@@ -7,27 +8,35 @@ header
     width: 80px
     height: 60px
 
-
 .header-menu
     padding: 20px 0
+    display: none
+    +media(1024)
+        display: block
 
+.header-menu_li:hover
+    position: relative
+    &:before
+        content: ""
+        position: absolute
+        top: 90%
+        left: -10%
+        display: block
+        border-bottom: 1px solid #fff
+        width: 160px
 
 button a
-    font-size: 12rem
-    letter-spacing: 1rem
-    line-height: 32rem
-    text-transform: uppercase
-    color: #fff
-    font-weight: 700
-    font-family: "Maven Pro"
-    text-align: center
+        font-size: 12rem
+        letter-spacing: 1rem
+        line-height: 32rem
+        text-transform: uppercase
+        color: #fff
+        font-weight: 700
+        font-family: "Maven Pro"
+        text-align: center
 
-    &:hover
+        &:hover
         text-decoration: underline
-
-ul
-    display: inline-flex
-    width: 700px
 
 .analytics
     text-align: center
@@ -72,25 +81,24 @@ ul
     border-radius: 4px
     width: 40px
 
-.burger span::before,
-.burger span::after
-    content: ""
-    position: absolute
-    top: 10px
-    left: 0
-    background-color: #fff
-    height: 7px
-    width: 40px
-    border-radius: 4px
+.burger
+    span
+        &::before,
+        &::after
+            content: ""
+            position: absolute
+            top: 10px
+            left: 0
+            background-color: #fff
+            height: 7px
+            width: 40px
+            border-radius: 4px
 
 .burger span::before
     top: 30px
 
 .burger span::after
     top: 15px
-
-.header-menu
-    display: none
 
 .active_burger~.header-menu
     display: flex
@@ -110,7 +118,7 @@ ul
     display: none
     z-index: 10
 
-    & span
+    span
         position: absolute
         top: 10px
         left: 10px
@@ -121,7 +129,7 @@ ul
         width: 40px
         transition: 0.3s
 
-    & span::before
+    span::before
         content: ""
         position: absolute
         top: 1px
@@ -131,34 +139,11 @@ ul
         width: 40px
         border-radius: 4px
 
-    & span::before
+    span::before
         rotate: 90deg
 
     .active_burger~&
         display: block
 
-@media screen and (min-width: 768px)
-    .flex
-        flex-direction: column-reverse
-
-    .burger
-        display: none
-
-    .header-menu
-        display: block
-    
-    .logo 
-        justify-content: center
-
-@media screen and (min-width: 1024px) 
-    card
-        width: 49%
- 
-
-
-@media screen and (min-width: 1440px) 
-    .flex
-        flex-direction: row 
-
-    card
-        width: 28%
+.span_header
+    +title_span

@@ -3,3 +3,30 @@ extends templates/layout
 block seo 
 
 block content
+    .wrapper 
+        .rar
+            .analytics 
+                span.span_main.what MIsocial
+                .main_h2 
+                    h2.content_main  Select a Plan
+                .main_p
+                    p lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
+            .evenly
+                - let figures = [{span_main: "personal", styled_price: "0",main_p: "Lorem ipsum dolor sit amet. sed do eiusmod tempor incididunt ut. Labore et dolore magna aliqua. quis nostrud exercitation ullamco laboris. Ea commodo consequat.", button_defalut: "select plan", svg_id: "Asset 3@4x" },{span_main: "personal", sub_dollar_twonumber: "$", sub_month_twonumber: "/month", styled_price: "29", main_p: "Lorem ipsum dolor sit amet. sed do eiusmod tempor incididunt ut. Labore et dolore magna aliqua. quis nostrud exercitation ullamco laboris. Ea commodo consequat.", button_defalut: "select plan", svg_id: "Asset 2@4x"},{span_main: "personal", sub_dollar_twonumber: "$", sub_month_twonumber: "/month", span_main: "personal", styled_price: "49",main_p: "Lorem ipsum dolor sit amet. sed do eiusmod tempor incididunt ut. Labore et dolore magna aliqua. quis nostrud exercitation ullamco laboris. Ea commodo consequat.", button_defalut: "select plan", svg_id: "Asset 1@4x"}]
+                    each figure in figures
+                        figure
+                            figcaption 
+                                svg.icon_card
+                                    use(xlink:href='#' + figure.svg_id)
+                                span.span_main= figure.span_main
+                                p.styled_price= figure.styled_price
+                                    span.dollar $
+                                    span.month /month    
+                                p.p_card= figure.main_p
+                                button.button_defalut= figure.button_defalut
+    .main_down 
+        span.span_main_down SOCAL MARKETING ANALYTICS
+        h2.header_h2 Take control of your data
+        .block-buttons
+            button.button_main_down get started
+            button.button_main_down explore features

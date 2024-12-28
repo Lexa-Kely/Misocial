@@ -22,34 +22,6 @@ html(lang="en")
         include ../components/header
 
         main.main
-            .wrapper 
-                .rar
-                    .analytics 
-                        .span_main
-                            span MIsocial
-                        .main_h2 
-                            h2  Select a Plan
-                        .main_p
-                            p lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
-                    .evenly
-                        - let cards = [{span_main: "personal", sup_left: "$", styled_price: "0", sup_rigth:"/month",main_p: "Lorem ipsum dolor sit amet. sed do eiusmod tempor incididunt ut. Labore et dolore magna aliqua. quis nostrud exercitation ullamco laboris. Ea commodo consequat.", button_defalut: "select plan", svg_id: "Asset 3@4x" },{span_main: "personal", styled_price: "0/month", main_p: "Lorem ipsum dolor sit amet. sed do eiusmod tempor incididunt ut. Labore et dolore magna aliqua. quis nostrud exercitation ullamco laboris. Ea commodo consequat.", button_defalut: "select plan", svg_id: "Asset 2@4x"},{span_main: "personal", span_main: "personal", styled_price: "0/month",main_p: "Lorem ipsum dolor sit amet. sed do eiusmod tempor incididunt ut. Labore et dolore magna aliqua. quis nostrud exercitation ullamco laboris. Ea commodo consequat.", button_defalut: "select plan", svg_id: "Asset 1@4x"}]
-                          each card in cards
-                            card
-                                svg.icon_card
-                                    use(xlink:href='#' + card.svg_id)
-                                span.span_main= card.span_main
-                                span.styled_price= card.styled_price
-                                    sup.sup_left= card.sup_left
-                                    sup.sup_rigth= card.sup_rigth
-                                p.p_card= card.main_p
-                                button.button_defalut= card.button_defalut
-        .main_down 
-            span.span_main_down SOCAL MARKETING ANALYTICS
-            h2.header_h2 Take control of your data
-            .block-buttons
-                button.button_main_down get started
-                button.button_main_down explore features
-
             block content 
         include ../components/footer
         script(src="js/scripts.js")
