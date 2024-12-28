@@ -104,6 +104,7 @@ h2
 
 button
     +buttona
+    
 
 .styled_button
     border-radius: 25px
@@ -231,7 +232,13 @@ figure
 
 .main_p
     +title_p(false)
-    text-align: center
+    text-align: -webkit-center
+    p
+        width: 100%
+        +media(768)
+            width: 55%
+        +media(1440)
+            width: 25%
 
 .p_card
     +title_p(false)

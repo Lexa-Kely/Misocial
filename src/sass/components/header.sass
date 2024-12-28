@@ -14,17 +14,20 @@ header
     +media(1024)
         display: block
 
-.header-menu_li:hover
+.header-menu_li
     position: relative
-    &:before
-        content: ""
+    &::after
+        content: ''
         position: absolute
-        top: 90%
-        left: -10%
-        display: block
-        border-bottom: 1px solid #fff
-        width: 160px
+        left: 0
+        bottom: -5px
+        width: 0
+        height: 2px
+        background-color: #fff
+        transition: width 0.4s ease-in-out 
 
+    &:hover::after
+        width: 100%
 button a
         font-size: 12rem
         letter-spacing: 1rem
