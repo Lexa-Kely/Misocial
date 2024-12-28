@@ -56,6 +56,7 @@ figcaption
         font-weight: 500
         font-family: "Maven Pro"
         text-align: center
+        
 
 .span_main
     +title_span
@@ -131,6 +132,7 @@ button
     &:hover
         color: #fff
         background-color: $purple
+        border: 0
 
 figure
     display: block
@@ -141,8 +143,10 @@ figure
     background-color: #fff
     border: 1px solid #d7dbe8
     transition: 0.3s
+    +media(768)
+        width: 47%
     +media(1024)
-        width: 49%
+        width: 45%
     +media(1440)
         width: 24%
 
@@ -163,7 +167,7 @@ figure
     font-weight: 500
     font-family: "Maven Pro"
 
-.icon_figure
+.icon_card
     margin: 20px 0
     width: 120px
     height: 110px
@@ -218,6 +222,9 @@ figure
         background-color: $purple
 .block-buttons
     text-align: center
+    button
+        margin: 10px 20px
+        
 
 .button-footer
     +buttona(false)
